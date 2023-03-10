@@ -54,6 +54,11 @@ mod MoveSystem {
 
 #[contract]
 mod PositionComponent {
+    use option::OptionTrait;
+    use starknet::SyscallResult;
+    use traits::Into;
+    use traits::TryInto;
+
     #[derive(Copy, Drop)]
     struct Position {
         x: felt,
@@ -126,6 +131,11 @@ mod PositionComponent {
 
 #[contract]
 mod HealthComponent {
+    use option::OptionTrait;
+    use starknet::SyscallResult;
+    use traits::Into;
+    use traits::TryInto;
+
     #[derive(Copy, Drop)]
     struct Health {
         hp: felt, 

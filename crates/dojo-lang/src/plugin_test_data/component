@@ -32,6 +32,11 @@ use dojo::world::ComponentTrait;
 
 #[contract]
 mod PositionComponent {
+    use option::OptionTrait;
+    use starknet::SyscallResult;
+    use traits::Into;
+    use traits::TryInto;
+
     #[derive(Copy, Drop)]
     struct Position {
         x: felt,
